@@ -34,7 +34,7 @@ const Cart = () => {
     const checkout = () => {
         alert("added to orders succesfully")
         //remove all item from cart
-        axios.delete(`http://localhost:5000/cart/deleteall`)
+        axios.delete(`http://localhost:5000/deleteall/${userId}`)
             .then((r) => console.log(r))
             .catch((e) => console.log({ error: e.message }))
         navigate("/")
