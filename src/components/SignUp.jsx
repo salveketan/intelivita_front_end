@@ -1,16 +1,3 @@
-// import React from 'react'
-
-// const SignUp = () => {
-//     return (
-//         <div>
-//             SignUp
-//         </div>
-//     )
-// }
-
-// export default SignUp
-
-
 import React from 'react'
 import { Box, Button, Heading, Image, Input, Spacer, Text } from '@chakra-ui/react';
 import { useState } from 'react';
@@ -38,7 +25,7 @@ const Signin = () => {
         }
         else {
             const data =
-                await fetch("http://localhost:5000/signin",
+                await fetch("https://intelvitabackend.herokuapp.com/signin",
                     {
                         method: "POST",
                         headers: {

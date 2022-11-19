@@ -11,7 +11,7 @@ const Cart = () => {
     // console.log(userId);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/cart/${userId}`)
+        axios.get(`https://intelvitabackend.herokuapp.com/cart/${userId}`)
             .then(function (response) {
                 setData(response.data);
             })
@@ -24,7 +24,7 @@ const Cart = () => {
 
 
     const remove = async (id) => {
-        await fetch(`http://localhost:5000/cart/${id}`, {
+        await fetch(`https://intelvitabackend.herokuapp.com/cart/${id}`, {
             method: "DELETE",
         })
         alert("Item is remove from cart")
@@ -34,7 +34,7 @@ const Cart = () => {
     const checkout = () => {
         alert("added to orders succesfully")
         //remove all item from cart
-        axios.delete(`http://localhost:5000/deleteall/${userId}`)
+        axios.delete(`https://intelvitabackend.herokuapp.com/deleteall/${userId}`)
             .then((r) => console.log(r))
             .catch((e) => console.log({ error: e.message }))
         navigate("/")

@@ -9,7 +9,7 @@ const Studio = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/products')
+        axios.get('https://intelvitabackend.herokuapp.com/products')
             .then(function (response) {
                 setData(response.data.product);
             })
@@ -17,7 +17,7 @@ const Studio = () => {
 
     const addToCart = (e) => {
         const { name, salePrice, image, customerReviewCount } = e
-        axios.post(`http://localhost:5000/cart`, {
+        axios.post(`https://intelvitabackend.herokuapp.com/cart`, {
             name, salePrice, image, customerReviewCount, userId
         })
             .then((response) => {
@@ -29,14 +29,14 @@ const Studio = () => {
     }
     const handle = (e) => {
         if (e.target.value == "hightolow") {
-            axios.get('http://localhost:5000/products')
+            axios.get('https://intelvitabackend.herokuapp.com/products')
                 .then(function (response) {
                     let ans = response.data.product.sort((a, b) => b.salePrice - a.salePrice)
                     setData(ans)
                 })
         }
         else if (e.target.value == "lowtohigh") {
-            axios.get('http://localhost:5000/products')
+            axios.get('https://intelvitabackend.herokuapp.com/products')
                 .then(function (response) {
                     let ans = response.data.product.sort((a, b) => a.salePrice - b.salePrice)
                     setData(ans)

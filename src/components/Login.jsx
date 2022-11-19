@@ -18,7 +18,7 @@ const Login = () => {
         e.preventDefault();
         const { email, password } = user;
         const data =
-            await fetch("http://localhost:5000/login",
+            await fetch("https://intelvitabackend.herokuapp.com/login",
                 {
                     method: "POST",
                     headers: {
