@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box, Button, Heading, Image, Input, Spacer, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
     const navigate = useNavigate()
     const [user, setUser] = useState({
         email: "", password: ""
@@ -49,7 +50,9 @@ const Login = () => {
             window.location.reload()
         }
     }
-
+    useEffect(() => {
+        alert("please login to look the products")
+    }, [])
     return (
         <div>
 
@@ -76,16 +79,7 @@ const Login = () => {
                             <Text fontSize='sm'>By “logging in”, you agree to our Privacy Policy and Terms & Conditions.</Text>
                         </Box>
                         <Button onClick={PostData} marginTop={"10px"} borderRadius={"50px"} bg={"black"} color={"white"}>Log-In</Button>
-                        <Box marginTop={"10px"} display={"flex"}>
-                            <Box borderTop={"1px solid rgb(68,68,68)"} w="45%" marginTop={"10px"}></Box>
-                            <Spacer />
-                            <Box>Or</Box>
-                            <Spacer />
-                            <Box borderTop={"1px solid rgb(68,68,68)"} w="45%" marginTop={"10px"}></Box>
-                        </Box>
-                        <Link to={"/menu"}>
-                            <Button marginTop={"10px"} borderRadius={"50px"} border={"1px solid black"} color={"black"} w="100%" bg={"white"}>Skip, Continue As guest</Button>
-                        </Link>
+
                     </Box>
                 </form>
             </Box>

@@ -10,7 +10,8 @@ import Cart from './components/Cart';
 
 function App() {
   const user = JSON.parse(localStorage.getItem("intel-user")) || [];
-
+ 
+ 
   return (
     <div className='App'>
       <Navbar />

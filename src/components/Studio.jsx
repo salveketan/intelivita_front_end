@@ -6,7 +6,9 @@ const Studio = () => {
     const user = JSON.parse(localStorage.getItem("intel-user")) || [];
     const userId = user?.userExist._id;
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
+
+    
 
     useEffect(() => {
         axios.get('https://intelvitabackend.herokuapp.com/products')

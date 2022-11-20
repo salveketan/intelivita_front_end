@@ -85,16 +85,7 @@ const Signin = () => {
                             <Text fontSize='sm'>By “logging in”, you agree to our Privacy Policy and Terms & Conditions.</Text>
                         </Box>
                         <Button onClick={PostData} marginTop={"10px"} borderRadius={"50px"} bg={"black"} color={"white"}>Sign-Up</Button>
-                        <Box marginTop={"10px"} display={"flex"}>
-                            <Box borderTop={"1px solid rgb(68,68,68)"} w="45%" marginTop={"10px"}></Box>
-                            <Spacer />
-                            <Box>Or</Box>
-                            <Spacer />
-                            <Box borderTop={"1px solid rgb(68,68,68)"} w="45%" marginTop={"10px"}></Box>
-                        </Box>
-                        <Link to={"/menu"}>
-                            <Button marginTop={"10px"} borderRadius={"50px"} border={"1px solid black"} color={"black"} w="90%" bg={"white"}>Skip, Continue As guest</Button>
-                        </Link>
+                        
                     </Box>
                 </form>
             </Box>
