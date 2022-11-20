@@ -66,7 +66,7 @@ const Studio = () => {
                             <h4>{e.name}</h4>
                             <p> ₹{e.salePrice}</p>
                             <Button colorScheme='teal' variant='outline' onClick={() => addToCart(e)}>
-                                add to cart
+                                Add To Cart
                             </Button>
                         </Box>
                     </Center>

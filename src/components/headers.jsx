@@ -304,7 +304,7 @@ const NAV_ITEMS = [
         href: '/cart',
     },
     {
-        label: 'about',
+        label: 'About',
         href: 'https://ketan-salve-portfolio.netlify.app/',
     },
 ];
